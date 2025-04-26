@@ -9,7 +9,12 @@ public class ConcatInteger {
         lists.add(List.of(1, 2));
         lists.add(List.of(3, 4));
         lists.add(List.of(5, 6));
+        System.out.println("Using loop: ");
+        List<Integer> test = concatUsingLoop(lists);
+        System.out.println(test);
+    }
 
+    public static List<Integer> concatUsingLoop(List<List<Integer>> lists) {
         List<Integer> concat = new ArrayList<>();
 
         for (int i = 0; i < lists.size() - 1; i++) {
@@ -21,6 +26,6 @@ public class ConcatInteger {
                 }
             }
         }
-        System.out.println(concat);
+        return concat;
     }
 }
